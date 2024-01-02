@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import CarouselItem from "./carouselItem";
+import CarouselItem from "./CarouselItem";
 import Image from "next/image";
 import arrowDown from "@/public/arrow-down.svg";
 import arrowUp from "@/public/arrow-up.svg";
