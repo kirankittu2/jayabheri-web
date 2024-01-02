@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Proxima-Nova';
+  src: url('../public/fonts/Proxima-Nova-Font.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Clayo-semibold';
+  src: url('../public/fonts/clayo/CLAYO-Semibold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Clayo-medium';
+  src: url('../public/fonts/clayo/CLAYO-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Glancyr-light';
+  src: url('../public/fonts/glancyr/Glancyr-Light.otf') format('opentype');
+}
+
+.proxima-nova {
+  font-family: 'Proxima-Nova', sans-serif;
+}
+
+.proxima-nova-bold {
+  font-family: 'Proxima-Nova', sans-serif;
+  font-weight: bold;
+}
+
+.Clayo-semibold{
+  font-family: 'Clayo-semibold';
+}
+
+.Clayo-medium {
+  font-family: 'Clayo-medium';
+}
+
+.Glancyr-light {
+  font-family: 'Glancyr-light';
+}
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (min-width: 1921px) {
+  .max-text-size-30 {
+    font-size: 30px;
+  }
+
+  .max-text-size-20 {
+    font-size: 20px;
+  }
+}
+
+
+@layer components {
+  .font-size-14{
+    font-size: 14px;
+  }
+
+  .font-size-20{
+    font-size: 20px;
+  }
+
+  .vertical-range {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -45px;
+  }
+
+  .our-process-clip-path{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 89%);
+  }
+}
+
+.headings {
+  @apply text-[14px] Clayo-semibold text-[#B39C4D] mb-[45px];
+}
+
+.heading-30-white{
+  @apply text-[30px] Clayo-medium text-center text-white;
+}
+
+.heading-30-green {
+  @apply text-[30px] Clayo-medium text-[#B39C4D];
+}
+
+.heading-54-white{
+  @apply text-[54px] text-white Clayo-medium max-[1590px]:leading-[70px];
+}
+
+.heading-54-dark-green{
+  @apply text-[54px] text-[#34623F] Clayo-medium text-center max-[1590px]:leading-[70px] mb-[40px] leading-[60px];
+}
+
+.heading-84{
+  @apply text-[84px] Clayo-medium text-[#34623F] leading-[100px] max-[1450px]:leading-[72px];
+}
+
+.custom-text-20-white{
+  @apply text-[20px] text-center proxima-nova;
+}
+
+.custom-text-20-green {
+  @apply text-[20px] text-[#535353] proxima-nova;
+}
+
+.custom-text-28{
+  @apply text-[28px] proxima-nova text-[#535353];
+}
+
+.our-process-input input[type="range"] {
+  -webkit-appearance: none;
+  /* Hides the default slider styling on WebKit browsers */
+  width: 505px;
+  height: 2px;
+  outline: none;
+  background-image: linear-gradient(90deg, transparent 50%, rgba(65, 65, 65, 0.4) 50%), repeating-linear-gradient(90deg, rgba(65, 65, 65, 0.4), rgba(65, 65, 65, 0.4) 1px, transparent 1px, transparent 10px);
+  background-size: 8px 8px;
+  rotate: 90deg;
+  cursor: pointer;
+}
+
+/* Styles for the slider thumb/handle */
+.our-process-input input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Hides the default thumb on WebKit browsers */
+  appearance: none;
+  width: 105px;
+  height: 11px;
+  background: #B39C4D;
+  /* Thumb color */
+  cursor: pointer;
+}
+
+.our-process-input input[type="range"]::-moz-range-thumb {
+  width: 105px;
+  height: 11px;
+  background: #B39C4D;
+  /* Thumb color */
+  cursor: pointer;
+
+}
+
+.animated-path {
+  animation: dash1 3s linear infinite;
+}
+
+@keyframes dash1 {
+  to {
+    stroke-dashoffset: 50;
+  }
+}
+
+@media (max-width: 1336px) {
+   .container-p-left{
+    padding-left: 80px;
+   }
+
+  .container-p-left-a-right {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+ }
+
+
+ .dashed-underline:hover {
+   border-bottom: 1px dashed transparent;
+   border-bottom-color: #B39C4D;
+   color: #B39C4D;
+   margin-bottom: -2px;
+ }
+
